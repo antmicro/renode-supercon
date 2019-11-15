@@ -6,6 +6,7 @@ $name?="hadbadge"
 using sysbus
 
 include $ORIGIN/TrivialUART.cs
+include $ORIGIN/GFX.cs
 
 mach create $name
 machine LoadPlatformDescription @ecp5_supercon_badge.repl
@@ -14,6 +15,7 @@ $ipl?=@http://antmicro.com/projects/renode/ipl.elf-s_518620-076189f1cfcc757698d5
 $bin?=@http://antmicro.com/projects/renode/helloworld.elf-s_347100-0666dce48a5a16a4bf65f11f65f34b77c4ba7cf5
 
 showAnalyzer sysbus.uart
+showAnalyzer sysbus.gfx
 
 macro reset
 """
